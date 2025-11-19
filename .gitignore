@@ -1,0 +1,25 @@
+# Node / TypeScript
+node_modules/
+dist/
+coverage/
+*.log
+
+# Env
+.env
+.env.*
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Prisma
+backend/prisma/*.db
+
+# Build artifacts
+backend/dist/
+mobile/dist/
+
+# Cache
+.tmp/
+.cache/
