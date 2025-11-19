@@ -1,0 +1,37 @@
+{
+  "projectName": "Sistema de Gestão de Locações (SaaS)",
+  "stack": {
+    "frontend": "React Native",
+    "backend": "Node.js/NestJS",
+    "database": "Postgres",
+    "cacheQueue": "Redis + BullMQ",
+    "hosting": "VPS Contabo"
+  },
+  "analysis": {
+    "paths": ["plano-implementacao-tarefas.md", "fluxograma-atual.md", "README.md", "tests/features"],
+    "ignore": ["node_modules", "dist", "build", "coverage", ".git", ".vscode", "infra", "backend", "mobile"],
+    "qualityGoals": {
+      "availability": ">=99.9%",
+      "latency_p95_ms": 200,
+      "testCoverageCritical": 0.8
+    }
+  },
+  "tests": {
+    "bdd": {
+      "framework": "cucumber-js",
+      "featuresPath": "tests/features"
+    },
+    "api": {
+      "framework": "jest",
+      "tools": ["supertest", "testcontainers (opcional)"]
+    },
+    "mobile": {
+      "framework": "@testing-library/react-native",
+      "e2e": "detox"
+    }
+  },
+  "ciCd": {
+    "provider": "GitHub Actions",
+    "stages": ["lint", "tests", "build", "containerize", "deploy"]
+  }
+}

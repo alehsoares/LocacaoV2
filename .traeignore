@@ -1,0 +1,19 @@
+# Ignorar pastas e arquivos comuns (documentação/planejamento não precisa destes)
+node_modules/
+dist/
+build/
+coverage/
+.tmp/
+.cache/
+.env
+.env.*
+.DS_Store
+.git/
+.idea/
+.vscode/
+*.log
+Dockerfile
+infra/
+backend/
+mobile/
+**/secrets/**
