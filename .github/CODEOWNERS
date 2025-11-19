@@ -1,0 +1,8 @@
+# Global code owners
+* @alehsoares
+
+# Backend
+backend/** @alehsoares
+
+# Docs
+docs/** @alehsoares
